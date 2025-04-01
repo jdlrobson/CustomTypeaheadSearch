@@ -1,0 +1,42 @@
+{
+	"name": "CustomTypeaheadSearch",
+	"author": [
+		"Web Team"
+	],
+	"descriptionmsg": "articlesummaries-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.42.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\CustomTypeaheadSearch\\": "src/"
+	},
+	"config": {
+	},
+	"HookHandlers": {
+		"CustomTypeaheadSearchHooks": {
+			"class": "MediaWiki\\Extension\\CustomTypeaheadSearch\\Hooks"
+		}
+	},
+	"Hooks": {
+		"ResourceLoaderRegisterModules": "CustomTypeaheadSearchHooks",
+		"AfterFinalPageOutput": "CustomTypeaheadSearchHooks"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "CustomTypeaheadSearch/resources"
+	},
+	"ResourceModules": {
+		"ext.CustomTypeaheadSearch": {
+			"dependencies": [
+				"vue"
+			],
+			"packageFiles": [
+				"ext.CustomTypeaheadSearch/index.js",
+				"ext.CustomTypeaheadSearch/App.vue"
+			]
+		}
+	},
+	"manifest_version": 2
+}
