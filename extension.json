@@ -20,7 +20,7 @@
 		}
 	},
 	"Hooks": {
-		"ResourceLoaderRegisterModules": "CustomTypeaheadSearchHooks",
+		"SkinPageReadyConfig": "CustomTypeaheadSearchHooks",
 		"AfterFinalPageOutput": "CustomTypeaheadSearchHooks"
 	},
 	"ResourceFileModulePaths": {

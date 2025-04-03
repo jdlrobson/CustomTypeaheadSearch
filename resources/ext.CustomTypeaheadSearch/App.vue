@@ -1,5 +1,5 @@
 <template>
-    <div>My custom typeahead!</div>
+    <div><input class="mw-searchInput">My custom JS typeahead!</div>
 </template>
 <script>
 const { defineComponent } = require( 'vue' );
